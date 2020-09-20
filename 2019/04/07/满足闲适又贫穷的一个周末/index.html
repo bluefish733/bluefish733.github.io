@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Ajax,Linux,Rails，网络… 等等的小碎片知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="满足闲适又贫穷的一个周末">
+<meta property="og:url" content="http://yoursite.com/2019/04/07/满足闲适又贫穷的一个周末/index.html">
+<meta property="og:site_name" content="Jinling&#39;s Blog">
+<meta property="og:description" content="Ajax,Linux,Rails，网络… 等等的小碎片知识">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/04/07/满足闲适又贫穷的一个周末/hiahia.jpg">
+<meta property="og:updated_time" content="2019-04-07T13:41:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="满足闲适又贫穷的一个周末">
+<meta name="twitter:description" content="Ajax,Linux,Rails，网络… 等等的小碎片知识">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/07/满足闲适又贫穷的一个周末/hiahia.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jinling's Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/07/满足闲适又贫穷的一个周末/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>满足闲适又贫穷的一个周末 | Jinling's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jinling's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/07/满足闲适又贫穷的一个周末/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZJL">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinling's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">满足闲适又贫穷的一个周末
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-07 18:22:59 / 修改时间：21:41:54" itemprop="dateCreated datePublished" datetime="2019-04-07T18:22:59+08:00">2019-04-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/A-Task-from-LK-系列/" itemprop="url" rel="index"><span itemprop="name">A-Task-from-LK 系列</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Ajax,Linux,Rails，网络… 等等的小碎片知识</p>
+<a id="more"></a>
+<hr>
+<p>毕竟他说，我是一个很棒的人，只是我必须要经常总结❤<br>一点点积累，我就一定是个最棒的人，不辜负</p>
+<hr>
+<h1 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h1><p>AJAX其人，是个缩写，全名为Asynchronous JavaScript and XML，用JavaScript执行<strong>异步</strong>网络请求，既然是异步执行的，那么它需要通过回调函数来获得响应。一次HTTP请求会对应一个页面，JavaScript可以使用户在提交HTTP请求之后感觉没有切换页面，但是相应的内容会更新出来。下面看一下是怎样用JavaScript实现AJAX的。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="现代浏览器对应的AJAX"><a href="#现代浏览器对应的AJAX" class="headerlink" title="现代浏览器对应的AJAX"></a>现代浏览器对应的AJAX</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">function success(text) &#123;</span><br><span class="line">    var textarea = document.getElementById(&apos;test-response-text&apos;);</span><br><span class="line">    textarea.value = text;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function fail(code) &#123;</span><br><span class="line">    var textarea = document.getElementById(&apos;test-response-text&apos;);</span><br><span class="line">    textarea.value = &apos;Error code: &apos; + code;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var request = new XMLHttpRequest(); // 新建XMLHttpRequest对象</span><br><span class="line"></span><br><span class="line">request.onreadystatechange = function () &#123; // 状态发生变化时，函数被回调</span><br><span class="line">    if (request.readyState === 4) &#123; // 成功完成</span><br><span class="line">        // 判断响应结果:</span><br><span class="line">        if (request.status === 200) &#123;</span><br><span class="line">            // 成功，通过responseText拿到响应的文本:</span><br><span class="line">            return success(request.responseText);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            // 失败，根据响应码判断失败原因:</span><br><span class="line">            return fail(request.status);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // HTTP请求还在继续...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 发送请求:</span><br><span class="line">request.open(&apos;GET&apos;, &apos;/api/categories&apos;);</span><br><span class="line">request.send();</span><br><span class="line"></span><br><span class="line">alert(&apos;请求已发送，请等待响应...&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="低版本IE中的AJAX和解决办法"><a href="#低版本IE中的AJAX和解决办法" class="headerlink" title="低版本IE中的AJAX和解决办法"></a>低版本IE中的AJAX和解决办法</h3><p>可以看到实现AJAX主要依靠XMLHttpRequest，对于低版本的IE可以换成ActiveXObject。</p>
+<p>为了通用一点还可以这样写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var request;</span><br><span class="line">if (window.XMLHttpRequest) &#123;</span><br><span class="line">    request = new XMLHttpRequest();</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    request = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>XMLHttpRequest对象的open()方法有3个参数，第一个指定GET/POST，第二个参数指定URL地址，第三个参数指定是否使用异步，这里当然是True，默认也是True，所以可以不用写。</p>
+<h2 id="安全限制"><a href="#安全限制" class="headerlink" title="安全限制"></a>安全限制</h2><p>默认情况下，JavaScript在发送AJAX请求时，URL的域名必须和当前页面完全一致。即域名、协议、端口号全部要相同。如果就是想访问外域怎么办？</p>
+<h3 id="通过Flash插件发送HTTP请求（不推荐）"><a href="#通过Flash插件发送HTTP请求（不推荐）" class="headerlink" title="通过Flash插件发送HTTP请求（不推荐）"></a>通过Flash插件发送HTTP请求（不推荐）</h3><h3 id="通过在同源域名下架设一个代理服务器来转发"><a href="#通过在同源域名下架设一个代理服务器来转发" class="headerlink" title="通过在同源域名下架设一个代理服务器来转发"></a>通过在同源域名下架设一个代理服务器来转发</h3><p>JavaScript负责将请求发送到代理服务器，代理服务器再将结果返回</p>
+<h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><p>这种方式只能用GET请求，并且要求返回JavaScript，这种跨域方式实际上利用了浏览器语序跨域引用JavaScript资源。这种方式需要在页面上准备好回调函数。<br>有一个小例子在之后提供的参考资料里面。</p>
+<h2 id="其他内容"><a href="#其他内容" class="headerlink" title="其他内容"></a>其他内容</h2><p>我还没看</p>
+<p>以上AJAX内容参考<a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499861493e7c35be5e0864769a2c06afb4754acc6000#0" target="_blank" rel="noopener">廖雪峰老师的博客</a></p>
+<h2 id="留下个问题，用rails怎么使用AJAX呢？"><a href="#留下个问题，用rails怎么使用AJAX呢？" class="headerlink" title="留下个问题，用rails怎么使用AJAX呢？"></a>留下个问题，用rails怎么使用AJAX呢？</h2><hr>
+<h1 id="Linux-命令之chmod"><a href="#Linux-命令之chmod" class="headerlink" title="Linux 命令之chmod"></a>Linux 命令之chmod</h1><p>在Unix和Linux的各种操作系统下，文件都按“读”(r)、“写”(w)、“运行”(x)设定权限，其中r=4，w=2,x=1.<br>用ls -l命令时得到：<br>-rw-r–r– 1 apple users 2254 2006-05-20 13:47 tt.htm<br>第一个rw表示该登陆用户的权限，第二个r表示他所在组的人的权限，第三个r表示其他人的最高权限。<br>上述命令可以表示为644<br>那么777就是所有人都有最高权限<br>运行下面的命令将使所有人都有最高权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 tt.htm</span><br></pre></td></tr></table></figure></p>
+<p>详情请访问<a href="https://www.cnblogs.com/sipher/articles/2429772.html" target="_blank" rel="noopener">这里</a></p>
+<hr>
+<h1 id="rails"><a href="#rails" class="headerlink" title="rails"></a>rails</h1><h2 id="Jbuilder"><a href="#Jbuilder" class="headerlink" title="Jbuilder"></a>Jbuilder</h2><p><a href="https://github.com/rails/jbuilder#jbuilder" target="_blank" rel="noopener">https://github.com/rails/jbuilder#jbuilder</a><br><a href="http://ohcoder.com/blog/2015/04/19/jbuilder/" target="_blank" rel="noopener">http://ohcoder.com/blog/2015/04/19/jbuilder/</a></p>
+<h2 id="rake"><a href="#rake" class="headerlink" title="rake"></a>rake</h2><p><a href="https://medium.com/@pk60905/%E5%9C%A8ruby%E5%92%8Crails%E4%B8%AD%E7%9A%84rake%E6%98%AF%E4%BB%80%E9%BA%BC-2eeefe99d7ce" target="_blank" rel="noopener">https://medium.com/@pk60905/%E5%9C%A8ruby%E5%92%8Crails%E4%B8%AD%E7%9A%84rake%E6%98%AF%E4%BB%80%E9%BA%BC-2eeefe99d7ce</a></p>
+<h2 id="Specs（还没用过）"><a href="#Specs（还没用过）" class="headerlink" title="Specs（还没用过）"></a>Specs（还没用过）</h2><p><a href="http://www.betterspecs.org/" target="_blank" rel="noopener">http://www.betterspecs.org/</a></p>
+<hr>
+<h1 id="云、CDN、IDC"><a href="#云、CDN、IDC" class="headerlink" title="云、CDN、IDC"></a>云、CDN、IDC</h1><p>这部分属于我在科普我自己<br><a href="https://www.zhihu.com/question/40534161" target="_blank" rel="noopener">https://www.zhihu.com/question/40534161</a><br><a href="https://www.zhihu.com/question/36514327?rf=37353035" target="_blank" rel="noopener">https://www.zhihu.com/question/36514327?rf=37353035</a></p>
+<hr>
+<h1 id="关系型数据库中DDL、DML和DCL"><a href="#关系型数据库中DDL、DML和DCL" class="headerlink" title="关系型数据库中DDL、DML和DCL"></a>关系型数据库中DDL、DML和DCL</h1><p><a href="https://blog.51cto.com/jim123/1979202" target="_blank" rel="noopener">https://blog.51cto.com/jim123/1979202</a></p>
+<hr>
+<h1 id="git-alias"><a href="#git-alias" class="headerlink" title="git alias"></a>git alias</h1><p><a href="https://juejin.im/post/5c9660c45188252d60192c5e?utm_source=gold_browser_extension" target="_blank" rel="noopener">https://juejin.im/post/5c9660c45188252d60192c5e?utm_source=gold_browser_extension</a></p>
+<hr>
+<h1 id="JSON-与字符串格式转换"><a href="#JSON-与字符串格式转换" class="headerlink" title="JSON 与字符串格式转换"></a>JSON 与字符串格式转换</h1><p><a href="https://juejin.im/post/5c9660c45188252d60192c5e?utm_source=gold_browser_extension" target="_blank" rel="noopener">https://juejin.im/post/5c9660c45188252d60192c5e?utm_source=gold_browser_extension</a></p>
+<hr>
+<h1 id="TP5-Restful路由设置"><a href="#TP5-Restful路由设置" class="headerlink" title="TP5 Restful路由设置"></a>TP5 Restful路由设置</h1><p><a href="https://blog.csdn.net/handsome_926/article/details/79698346" target="_blank" rel="noopener">https://blog.csdn.net/handsome_926/article/details/79698346</a></p>
+<hr>
+<h1 id="最后马一本书"><a href="#最后马一本书" class="headerlink" title="最后马一本书"></a>最后马一本书</h1><p><a href="https://bbs.hh010.com/thread-525435-1-1.html" target="_blank" rel="noopener">https://bbs.hh010.com/thread-525435-1-1.html</a></p>
+<p><img src="/2019/04/07/满足闲适又贫穷的一个周末/hiahia.jpg" alt="兜兜里有好吃的"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/07/北京之行/" rel="next" title="北京之行">
+                <i class="fa fa-chevron-left"></i> 北京之行
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/14/武汉的气温满30减15/" rel="prev" title="武汉的气温满30减15">
+                武汉的气温满30减15 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="ZJL">
+            
+              <p class="site-author-name" itemprop="name">ZJL</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AJAX"><span class="nav-number">1.</span> <span class="nav-text">AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">1.1.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现代浏览器对应的AJAX"><span class="nav-number">1.1.1.</span> <span class="nav-text">现代浏览器对应的AJAX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#低版本IE中的AJAX和解决办法"><span class="nav-number">1.1.2.</span> <span class="nav-text">低版本IE中的AJAX和解决办法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全限制"><span class="nav-number">1.2.</span> <span class="nav-text">安全限制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过Flash插件发送HTTP请求（不推荐）"><span class="nav-number">1.2.1.</span> <span class="nav-text">通过Flash插件发送HTTP请求（不推荐）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过在同源域名下架设一个代理服务器来转发"><span class="nav-number">1.2.2.</span> <span class="nav-text">通过在同源域名下架设一个代理服务器来转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSONP"><span class="nav-number">1.2.3.</span> <span class="nav-text">JSONP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他内容"><span class="nav-number">1.3.</span> <span class="nav-text">其他内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#留下个问题，用rails怎么使用AJAX呢？"><span class="nav-number">1.4.</span> <span class="nav-text">留下个问题，用rails怎么使用AJAX呢？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux-命令之chmod"><span class="nav-number">2.</span> <span class="nav-text">Linux 命令之chmod</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rails"><span class="nav-number">3.</span> <span class="nav-text">rails</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jbuilder"><span class="nav-number">3.1.</span> <span class="nav-text">Jbuilder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rake"><span class="nav-number">3.2.</span> <span class="nav-text">rake</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Specs（还没用过）"><span class="nav-number">3.3.</span> <span class="nav-text">Specs（还没用过）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#云、CDN、IDC"><span class="nav-number">4.</span> <span class="nav-text">云、CDN、IDC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关系型数据库中DDL、DML和DCL"><span class="nav-number">5.</span> <span class="nav-text">关系型数据库中DDL、DML和DCL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-alias"><span class="nav-number">6.</span> <span class="nav-text">git alias</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSON-与字符串格式转换"><span class="nav-number">7.</span> <span class="nav-text">JSON 与字符串格式转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TP5-Restful路由设置"><span class="nav-number">8.</span> <span class="nav-text">TP5 Restful路由设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后马一本书"><span class="nav-number">9.</span> <span class="nav-text">最后马一本书</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZJL</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-shizuku"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

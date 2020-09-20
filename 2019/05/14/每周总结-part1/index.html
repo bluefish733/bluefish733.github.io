@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="“The three virtues of a programmer: laziness, impatience, and hubris” — Larry Wall">
+<meta name="keywords" content="实习,Ruby">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每周总结 part1">
+<meta property="og:url" content="http://yoursite.com/2019/05/14/每周总结-part1/index.html">
+<meta property="og:site_name" content="Jinling&#39;s Blog">
+<meta property="og:description" content="“The three virtues of a programmer: laziness, impatience, and hubris” — Larry Wall">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-14T10:48:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="每周总结 part1">
+<meta name="twitter:description" content="“The three virtues of a programmer: laziness, impatience, and hubris” — Larry Wall">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jinling's Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/14/每周总结-part1/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>每周总结 part1 | Jinling's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jinling's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/每周总结-part1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZJL">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinling's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">每周总结 part1
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-14 18:37:10 / 修改时间：18:48:03" itemprop="dateCreated datePublished" datetime="2019-05-14T18:37:10+08:00">2019-05-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/A-Task-from-LK-系列/" itemprop="url" rel="index"><span itemprop="name">A-Task-from-LK 系列</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>“The three virtues of a programmer: laziness, impatience, and hubris” — Larry Wall<br><a id="more"></a></p>
+<h1 id="Ruby-鸭子类型语言"><a href="#Ruby-鸭子类型语言" class="headerlink" title="Ruby - 鸭子类型语言"></a>Ruby - 鸭子类型语言</h1><p><a href="https://www.ctolib.com/topics-37919.html" target="_blank" rel="noopener">https://www.ctolib.com/topics-37919.html</a></p>
+<h2 id="推荐书目"><a href="#推荐书目" class="headerlink" title="推荐书目"></a>推荐书目</h2><p>Practical Object-Oriented Design in Ruby, from Sandi Metz<br>Confident Ruby, from Avdi Grimm<br>Object on Rails, 同样来自 Avdi Grimm</p>
+<h2 id="开源项目与资源"><a href="#开源项目与资源" class="headerlink" title="开源项目与资源"></a>开源项目与资源</h2><p><a href="https://www.ctolib.com/" target="_blank" rel="noopener">https://www.ctolib.com/</a></p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><p>比如这个 ||=<br><a href="https://blog.csdn.net/lihuan974683978/article/details/8686297" target="_blank" rel="noopener">https://blog.csdn.net/lihuan974683978/article/details/8686297</a></p>
+<h1 id="awesome-gem"><a href="#awesome-gem" class="headerlink" title="awesome gem"></a>awesome gem</h1><p><a href="https://github.com/markets/awesome-ruby/blob/master/README.md" target="_blank" rel="noopener">https://github.com/markets/awesome-ruby/blob/master/README.md</a></p>
+<h1 id="Cookie、Session，Devise"><a href="#Cookie、Session，Devise" class="headerlink" title="Cookie、Session，Devise"></a>Cookie、Session，Devise</h1><p>在做代理登录功能时用到的，了解一下<br><a href="https://zhuanlan.zhihu.com/p/20818699" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20818699</a></p>
+<h1 id="sidekiq任务调度流程分析（先马，后面了解多一些再仔细看）"><a href="#sidekiq任务调度流程分析（先马，后面了解多一些再仔细看）" class="headerlink" title="sidekiq任务调度流程分析（先马，后面了解多一些再仔细看）"></a>sidekiq任务调度流程分析（先马，后面了解多一些再仔细看）</h1><p><a href="https://ruby-china.org/topics/31470" target="_blank" rel="noopener">https://ruby-china.org/topics/31470</a></p>
+<h2 id="关于读源码的建议"><a href="#关于读源码的建议" class="headerlink" title="关于读源码的建议"></a>关于读源码的建议</h2><ul>
+<li>带着问题去阅读，效率通常很高；</li>
+<li>读的过程中适当放弃无关细节，只追击与问题相关的线索；</li>
+<li>有些文档中没有提及的配置项，往往都藏匿在代码之中；</li>
+<li>只有充分了解了工具的运行机制，在遇到问题调优的时候才能得心应手。</li>
+</ul>
+<h1 id="错误处理机制"><a href="#错误处理机制" class="headerlink" title="错误处理机制"></a>错误处理机制</h1><p><a href="https://medium.com/@pk60905/rails%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%99%95%E7%90%86%E6%A9%9F%E5%88%B6begin-rescue%E5%92%8Cexception-ab71156a24a2" target="_blank" rel="noopener">https://medium.com/@pk60905/rails%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%99%95%E7%90%86%E6%A9%9F%E5%88%B6begin-rescue%E5%92%8Cexception-ab71156a24a2</a></p>
+<h1 id="见过的最走心的HTTP状态码解释"><a href="#见过的最走心的HTTP状态码解释" class="headerlink" title="见过的最走心的HTTP状态码解释"></a>见过的最走心的HTTP状态码解释</h1><p><a href="https://blog.csdn.net/hzw05103020/article/details/47276005" target="_blank" rel="noopener">https://blog.csdn.net/hzw05103020/article/details/47276005</a></p>
+<h1 id="crontab定时任务"><a href="#crontab定时任务" class="headerlink" title="crontab定时任务"></a>crontab定时任务</h1><p>只用过-l 和 -e<br><a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html" target="_blank" rel="noopener">https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html</a></p>
+<h1 id="ruby时间和日期"><a href="#ruby时间和日期" class="headerlink" title="ruby时间和日期"></a>ruby时间和日期</h1><p><a href="https://blog.csdn.net/leejeff/article/details/54405873" target="_blank" rel="noopener">https://blog.csdn.net/leejeff/article/details/54405873</a><br><a href="https://blog.csdn.net/weixin_42428631/article/details/80876157" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42428631/article/details/80876157</a></p>
+<h1 id="关于Active-Mailer"><a href="#关于Active-Mailer" class="headerlink" title="关于Active Mailer"></a>关于Active Mailer</h1><p>问报错信息有几重要<br><a href="https://ruby-china.org/topics/8918" target="_blank" rel="noopener">https://ruby-china.org/topics/8918</a></p>
+<h1 id="puma-基于Ruby的Web-Server服务器"><a href="#puma-基于Ruby的Web-Server服务器" class="headerlink" title="puma 基于Ruby的Web Server服务器"></a>puma 基于Ruby的Web Server服务器</h1><p><a href="https://github.com/puma/puma" target="_blank" rel="noopener">https://github.com/puma/puma</a><br><a href="https://www.jianshu.com/p/0b8089a3bc56" target="_blank" rel="noopener">https://www.jianshu.com/p/0b8089a3bc56</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/实习/" rel="tag"># 实习</a>
+          
+            <a href="/tags/Ruby/" rel="tag"># Ruby</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/14/武汉的气温满30减15/" rel="next" title="武汉的气温满30减15">
+                <i class="fa fa-chevron-left"></i> 武汉的气温满30减15
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/14/每周总结-定时发送邮件/" rel="prev" title="每周总结 定时发送邮件">
+                每周总结 定时发送邮件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="ZJL">
+            
+              <p class="site-author-name" itemprop="name">ZJL</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ruby-鸭子类型语言"><span class="nav-number">1.</span> <span class="nav-text">Ruby - 鸭子类型语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐书目"><span class="nav-number">1.1.</span> <span class="nav-text">推荐书目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开源项目与资源"><span class="nav-number">1.2.</span> <span class="nav-text">开源项目与资源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number">2.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#awesome-gem"><span class="nav-number">3.</span> <span class="nav-text">awesome gem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cookie、Session，Devise"><span class="nav-number">4.</span> <span class="nav-text">Cookie、Session，Devise</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sidekiq任务调度流程分析（先马，后面了解多一些再仔细看）"><span class="nav-number">5.</span> <span class="nav-text">sidekiq任务调度流程分析（先马，后面了解多一些再仔细看）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于读源码的建议"><span class="nav-number">5.1.</span> <span class="nav-text">关于读源码的建议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误处理机制"><span class="nav-number">6.</span> <span class="nav-text">错误处理机制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#见过的最走心的HTTP状态码解释"><span class="nav-number">7.</span> <span class="nav-text">见过的最走心的HTTP状态码解释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#crontab定时任务"><span class="nav-number">8.</span> <span class="nav-text">crontab定时任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ruby时间和日期"><span class="nav-number">9.</span> <span class="nav-text">ruby时间和日期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于Active-Mailer"><span class="nav-number">10.</span> <span class="nav-text">关于Active Mailer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#puma-基于Ruby的Web-Server服务器"><span class="nav-number">11.</span> <span class="nav-text">puma 基于Ruby的Web Server服务器</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZJL</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-shizuku"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
