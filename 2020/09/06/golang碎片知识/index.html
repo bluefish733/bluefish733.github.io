@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Jinling&#39;s Blog">
 <meta property="og:description" content="[日更]golang学习生活原本沉闷，但跑起来就有风">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-06T07:46:12.098Z">
+<meta property="og:updated_time" content="2020-09-20T11:42:58.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="golang碎片知识">
 <meta name="twitter:description" content="[日更]golang学习生活原本沉闷，但跑起来就有风">
@@ -368,12 +368,24 @@
                 
               
 
-              <time title="创建时间：2020-09-06 10:19:31 / 修改时间：15:46:12" itemprop="dateCreated datePublished" datetime="2020-09-06T10:19:31+08:00">2020-09-06</time>
+              <time title="创建时间：2020-09-06 10:19:31" itemprop="dateCreated datePublished" datetime="2020-09-06T10:19:31+08:00">2020-09-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-09-20 19:42:58" itemprop="dateModified" datetime="2020-09-20T19:42:58+08:00">2020-09-20</time>
               
             
           </span>
@@ -472,6 +484,67 @@
 <p>v[Edward]</p>
 <p>第六行对切片five的修改并未影响第五行的v的值。这是因为append操作在执行的时候是对创造了一个five的副本，v是five的副本的值。后续five的修改并不会影响开始的five的副本。</p>
 </blockquote>
+<h1 id="go-in-action"><a href="#go-in-action" class="headerlink" title="go in action"></a>go in action</h1><blockquote>
+<p>发现可以在<a href="https://livebook.manning.com/book/go-in-action/看这本书，打算读读看。" target="_blank" rel="noopener">https://livebook.manning.com/book/go-in-action/看这本书，打算读读看。</a></p>
+</blockquote>
+<p>respective 各自的</p>
+<p>retrieve 取回、检索、挽回、挽救</p>
+<p>dynamic 动态的</p>
+<p>inherent 内在的、固有的</p>
+<p>mechanism 机制、途径、机械装置</p>
+<p>corruption 出错、堕落</p>
+<p>populate 居住于</p>
+<p>anonymous 匿名的</p>
+<p>closure 关闭[U]、盖子[C]、闭包</p>
+<p>tricky 狡猾的、困难的、复杂的</p>
+<p>mechanic 结构、技术</p>
+<ul>
+<li>变量声明</li>
+</ul>
+<blockquote>
+<p>Here you see the use of the short variable declaration operator (:=). This operator is used to both declare and initialize variables at the same time. The type of each value being returned is used by the compiler to determine the type for each variable, respectively. The short variable declaration operator is just a shortcut to streamline your code and make the code more readable. The variable it declares is no different than any other variable you may declare when using the keyword var.</p>
+</blockquote>
+<p>这里说:=只是个shortcut，和var声明出来的没有区别。但是:=不能在函数外部定义变量，只能定义局部变量，而var可以定义全局变量。</p>
+<blockquote>
+<p>A good rule of thumb when declaring variables is to use the keyword var when declaring variables that will be initialized to their zero value, and to use the short variable declaration operator when you’re providing extra initialization or making a function call.</p>
+</blockquote>
+<p>初始化变量用var还是:=呢，这里建议直接定义为零值的时候用var，不然用:=</p>
+<ul>
+<li>引用类型</li>
+</ul>
+<blockquote>
+<p>Channels are also a reference type in Go like maps and slices</p>
+</blockquote>
+<ul>
+<li>同步</li>
+</ul>
+<blockquote>
+<p>A WaitGroup is a great way to track when a goroutine is finished performing its work. A WaitGroup is a counting semaphore, and we’ll use it to count off goroutines as they finish their work.</p>
+</blockquote>
+<blockquote>
+<p>There’s something else interesting about the method call to Done: the WaitGroup value was never passed into the anonymous function as a parameter, yet the anonymous function has access to it.</p>
+</blockquote>
+<ul>
+<li>For range</li>
+</ul>
+<blockquote>
+<p>The keyword range can be used with arrays, strings, slices, maps, and channels. When we use for range to iterate over a slice, we get two values back on each iteration. The first is the index position of the element we’re iterating over, and the second is a copy of the value in that element</p>
+</blockquote>
+<ul>
+<li>pointer variable</li>
+</ul>
+<blockquote>
+<p>Pointer variables are great for sharing variables between functions. They allow functions to access and change the state of a variable that was declared within the scope of a different function and possibly a different goroutine.</p>
+</blockquote>
+<blockquote>
+<p>In Go, all variables are passed by value. Since the value of a pointer variable is the address to the memory being pointed to, passing pointer variables between functions is still considered a pass by value.</p>
+</blockquote>
+<ul>
+<li>闭包与匿名函数</li>
+</ul>
+<blockquote>
+<p><a href="https://segmentfault.com/a/1190000018689134" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018689134</a></p>
+</blockquote>
 <p>tbc.</p>
 
       
@@ -518,6 +591,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/12/27/随笔/" rel="prev" title="随笔">
+                随笔 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -589,7 +666,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -631,7 +708,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -674,7 +753,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#日更-golang学习"><span class="nav-number">1.</span> <span class="nav-text">[日更]golang学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#slice相关"><span class="nav-number">1.1.</span> <span class="nav-text">slice相关</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#日更-golang学习"><span class="nav-number">1.</span> <span class="nav-text">[日更]golang学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#slice相关"><span class="nav-number">1.1.</span> <span class="nav-text">slice相关</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#go-in-action"><span class="nav-number">2.</span> <span class="nav-text">go in action</span></a></li></ol></div>
             
 
           </div>
